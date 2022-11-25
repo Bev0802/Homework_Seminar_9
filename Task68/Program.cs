@@ -3,6 +3,7 @@
 //m = 2, n = 3 -> A(m,n) = 9
 //m = 3, n = 2 -> A(m,n) = 29
 
+//МЕТОД
 // функция Аккермана
 uint AckermanFunction(uint n, uint m)
 {
@@ -15,11 +16,13 @@ uint AckermanFunction(uint n, uint m)
       return AckermanFunction(n - 1, AckermanFunction(n, m - 1));
 }
 
+//ПРОГРАММА
 Console.Write("Введите челое положительное число M: ");
 uint m = Convert.ToUInt32(Console.ReadLine());
 
 Console.Write("Введите челое положительное число N: ");
 uint n = Convert.ToUInt32(Console.ReadLine());
 
+// вывод результата
 uint result = AckermanFunction(m, n);
 Console.Write($"{result} ");
